@@ -677,9 +677,9 @@ internal class __CBOREncoder: CBOREncoderProtocol, SingleValueEncodingContainer 
             result = CBOREncoder.encodeNil()
         } else if value is CBOR.Undefined {
             result = CBOREncoder.encodeUndefined()
-        } else if let dict = value as? [String: Encodable] {
+        } else if let dict = conditionalCast(value, to: [String: Encodable].self) {
             result = try encode(dict)
-        } else if let dict = value as? [Int: Encodable] {
+        } else if let dict = conditionalCast(value, to: [Int: Encodable].self) {
             result = try encode(dict)
         } else if let data = value as? CBOR.IndefiniteLengthData {
             result = try encode(data)
@@ -715,6 +715,10 @@ internal class __CBOREncoder: CBOREncoderProtocol, SingleValueEncodingContainer 
         }
 
         return result
+    }
+
+    private func conditionalCast<T, U>(_ object: T?, to type: U.Type) -> U? {
+        return (object == nil) ? nil : (object as? U)
     }
 
     // MARK: Encoder Protocol Requirements
