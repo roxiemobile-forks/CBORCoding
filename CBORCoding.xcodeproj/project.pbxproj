@@ -1379,10 +1379,10 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		DDB1DF6C240B38A000C20FED /* XCRemoteSwiftPackageReference "Half" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SomeRandomiOSDev/Half.git";
+			repositoryURL = "https://github.com/roxiemobile-forks/Half";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				kind = exactVersion;
+				version = "1.2.0-patch.1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

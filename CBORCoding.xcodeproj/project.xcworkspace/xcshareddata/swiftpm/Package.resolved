@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "Half",
-        "repositoryURL": "https://github.com/SomeRandomiOSDev/Half.git",
+        "repositoryURL": "https://github.com/roxiemobile-forks/Half",
         "state": {
           "branch": null,
-          "revision": "f40c243c767459426fdbbb5aad44f4a0d853542e",
-          "version": "1.2.0"
+          "revision": "311e63e1cd432dd62cbc0c221f56b10c94b60c81",
+          "version": "1.2.0-patch.1"
         }
       }
     ]

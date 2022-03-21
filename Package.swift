@@ -1,14 +1,14 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
     name: "CBORCoding",
 
     platforms: [
-        .iOS("8.0"),
-        .macOS("10.10"),
-        .tvOS("9.0"),
-        .watchOS("2.0")
+        .iOS("12.0"),
+        .macOS("10.12"),
+        .tvOS("12.0"),
+        .watchOS("3.0"),
     ],
 
     products: [
@@ -16,7 +16,7 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/SomeRandomiOSDev/Half", from: "1.2.0")
+        .package(url: "https://github.com/roxiemobile-forks/Half", .exact("1.2.0-patch.1"))
     ],
 
     targets: [
